@@ -3,6 +3,7 @@
     :absolute="absolute"
     :right="right"
     :top="top"
+    :block="block"
     :icon="icon !== '' ? true : false"
     :type="type"
     :disabled="disabled"
@@ -25,6 +26,10 @@ export default {
     type: {
       type: String,
       default: "button",
+    },
+    block: {
+      type: Boolean,
+      default: false,
     },
     absolute: {
       type: Boolean,
