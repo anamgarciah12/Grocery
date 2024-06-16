@@ -5,6 +5,12 @@
         <h1>Productos</h1>
         <v-spacer />
         <Button label="Ver lista de compras" />
+        <Button
+          label="Cerrar sesion"
+          color="secondary"
+          class="ml-3"
+          @eventClick="sendForm"
+        />
       </v-toolbar>
       <v-container>
         <v-row>
@@ -29,6 +35,10 @@
 
 <script>
 export default {
-  //
+  methods: {
+    sendForm() {
+      $nuxt.$router.push("signin");
+    },
+  },
 };
 </script>
