@@ -4,7 +4,7 @@
       <v-toolbar flat color="#ff000000">
         <h1>Productos</h1>
         <v-spacer />
-        <Button label="Ver lista de compras" color="#F16E06" />
+        <Button label="Ver lista de compras" />
       </v-toolbar>
       <v-container>
         <v-row>
@@ -17,11 +17,7 @@
               <v-card-title>Cafe Badilico</v-card-title>
               <v-card-subtitle>$ 5000</v-card-subtitle>
               <v-card-actions>
-                <Button
-                  :block="true"
-                  label="Agregar a la lista de compras"
-                  color="#F16E06"
-                />
+                <Button :block="true" label="Agregar a la lista de compras" />
               </v-card-actions>
             </v-card>
           </v-col>
