@@ -2,18 +2,19 @@
   <v-app id="inspire">
     <v-main>
       <v-toolbar flat color="#ff000000">
-        <h1>Favoritos</h1>
+        <h1>Mis favoritos</h1>
         <v-spacer />
         <!-- <Button label="Ver lista de compras" /> -->
 
         <!-- Lista de productos -->
         <Button label="Mis compras" color="primary" @eventClick="sendForm" />
+        <Button label="Productos" class="ml-3" @eventClick="goProducts" />
 
         <Button
           label="Cerrar sesion"
           color="secondary"
           class="ml-3"
-          @eventClick="sendForm"
+          @eventClick="logout"
         />
       </v-toolbar>
       <v-container>
@@ -41,7 +42,13 @@
 export default {
   methods: {
     sendForm() {
+      $nuxt.$router.push("shopping");
+    },
+    logout() {
       $nuxt.$router.push("signin");
+    },
+    goProducts() {
+      $nuxt.$router.push("products");
     },
   },
 };

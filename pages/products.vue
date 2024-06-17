@@ -7,7 +7,13 @@
         <!-- <Button label="Ver lista de compras" /> -->
 
         <!-- Lista de productos -->
-        <Button label="Mis compras" color="primary" @eventClick="sendForm" />
+        <Button label="Mis compras" color="primary" @eventClick="goShopping" />
+        <Button
+          label="Mis favoritos"
+          color="primary"
+          class="ml-3"
+          @eventClick="goFavorites"
+        />
         <Button
           label="Cerrar sesion"
           color="secondary"
@@ -41,6 +47,12 @@ export default {
   methods: {
     sendForm() {
       $nuxt.$router.push("signin");
+    },
+    goShopping() {
+      $nuxt.$router.push("shopping");
+    },
+    goFavorites() {
+      $nuxt.$router.push("favorites");
     },
   },
 };
